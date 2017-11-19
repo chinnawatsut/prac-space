@@ -6,16 +6,30 @@ import (
 
 func fizzBuzz(a int) string {
 
-	if a%3 == 0 && a%5 == 0 {
+	if isFizz(a) && isBuzz(a) {
 		return "FizzBuzz"
 	}
 
-	if a%3 == 0 {
+	if isFizz(a) {
 		return "Fizz"
 	}
 
-	if a%5 == 0 {
+	if isBuzz(a) {
 		return "Buzz"
 	}
 	return strconv.Itoa(a)
+}
+
+func isFizz(a int) bool {
+	if a%3 == 0 {
+		return true
+	}
+	return false
+}
+
+func isBuzz(a int) bool {
+	if a%5 == 0 {
+		return true
+	}
+	return false
 }
