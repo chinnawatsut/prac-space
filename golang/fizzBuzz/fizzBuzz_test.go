@@ -16,6 +16,8 @@ func TestSayBuzzIfDividableBy5(t *testing.T) {
 
 func TestSayFizzBuzzIfDeviddableBy3or5(t *testing.T) {
 	compare(fizzBuzz(15), "FizzBuzz", t)
+	compare(fizzBuzz(30), "FizzBuzz", t)
+
 }
 
 func TestSayAsInput(t *testing.T) {
