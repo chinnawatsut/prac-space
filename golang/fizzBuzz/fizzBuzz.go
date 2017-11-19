@@ -5,18 +5,20 @@ import (
 )
 
 func fizzBuzz(a int) string {
-
-	if isFizz(a) && isBuzz(a) {
-		return "FizzBuzz"
-	}
+	var shout string = ""
 
 	if isFizz(a) {
-		return "Fizz"
+		shout += "Fizz"
 	}
 
 	if isBuzz(a) {
-		return "Buzz"
+		shout += "Buzz"
 	}
+
+	if len(shout) > 0 {
+		return shout
+	}
+
 	return strconv.Itoa(a)
 }
 
