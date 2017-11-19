@@ -3,13 +3,15 @@ package fizzBuzz
 import "testing"
 
 func TestSay1(t *testing.T) {
-	if fizzBuzz(1) != "1" {
-		t.Error("Expecting ", "1", "but got", fizzBuzz(1))
-	}
+	compare(fizzBuzz(1), "1", t)
 }
 
 func TestSay2(t *testing.T) {
-	if fizzBuzz(2) != "2" {
-		t.Error("Expecting ", "2", "but got", fizzBuzz(2))
+	compare(fizzBuzz(2), "2", t)
+}
+
+func compare(result, expecting string, t *testing.T) {
+	if result != expecting {
+		t.Error("Expecting ", expecting, "but got", result)
 	}
 }
