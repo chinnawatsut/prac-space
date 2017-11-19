@@ -2,8 +2,20 @@ package fizzBuzz
 
 import "testing"
 
-func TestSayFizz(t *testing.T) {
-	compare(fizzBuzz(3), "fizz", t)
+func TestSayFizzIfDividableBy5(t *testing.T) {
+	compare(fizzBuzz(3), "Fizz", t)
+	compare(fizzBuzz(6), "Fizz", t)
+	compare(fizzBuzz(9), "Fizz", t)
+
+}
+
+func TestSayBuzzIfDividableBy5(t *testing.T) {
+	compare(fizzBuzz(5), "Buzz", t)
+	compare(fizzBuzz(10), "Buzz", t)
+}
+
+func TestSayFizzBuzzIfDeviddableBy3or5(t *testing.T) {
+	compare(fizzBuzz(15), "FizzBuzz", t)
 }
 
 func TestSayAsInput(t *testing.T) {
