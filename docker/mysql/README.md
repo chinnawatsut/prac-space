@@ -18,3 +18,12 @@ FLUSH PRIVILEGES;
 
 #connect with workbench
 username@0.0.0.0:3306 -p password
+
+#list all docker stopped
+docker ps -a
+
+#stop docker
+docker stop <tag>
+
+#start docker
+docker start <tag>
